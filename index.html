@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>为你跳动的心</title>
+    
+    <script type="text/javascript">
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+   		
+    </script>
+    <style>
+    	h3{
+    		color: red;
+    		font-size: 20px;
+    		text-align: center;
+    		margin: 15px 0;
+    		background-color: #ccc;
+    	}
+    	img{
+    		display: block;
+    		margin: 0 auto;
+    	}
+    	p{
+    		text-align: center;
+    		animation: change ease-in infinite;
+    		color:#000;
+    		animation: change 1s  ease-in  infinite ; font-size: 36px; color:#f00; font-weight: bold;
+    		margin: 0 ;
+    		margin-bottom: 70px;
+    	}
+        @keyframes change {  
+            0%{ text-shadow: 0px 0px 4px #f00}  
+            50%{ text-shadow: 2px 2px 40px #f00}  
+            100%{ text-shadow: 2px 2px 4px #f00}  
+        } 
+        .heart{
+		   width: 200px;
+		   height: 200px;
+		   background: #f00;
+		   position: relative;
+		}
+		.heart:before, .heart:after{
+		    content: "";
+		    position: absolute;
+		    width: 200px;
+		    height: 200px;
+		    background: #f00;
+		    border-radius: 100px;
+		}
+		.heart:before{
+		   left: -100px;  
+		}
+		.heart:after{
+		   left: 0;
+		   top: -100px;
+		}
+		.heart{
+		   width: 198px;
+		   height: 198px;
+		   background: #f00;
+		   position: relative;
+		   filter:drop-shadow(0px 0px 20px rgb(255,20,20));
+		   transform: rotate(45deg);  
+		   margin: 0 auto;
+		   animation: heartbeat 1s ease-in infinite;
+		}
+		@keyframes heartbeat{
+		    0%{transform: rotate(45deg) scale(0.8,0.8); opacity: 1;}
+		    25%{transform: rotate(45deg) scale(1,1); opacity: 0.8;}
+		    100%{transform: rotate(45deg) scale(0.8,0.8); opacity: 1;}
+		}
+    </style>
+</head>
+<body>
+	<h3>beauty girl</h3>
+	<div>
+		<img src="img/29219038.jpg" alt="" />
+	</div>
+	<p>my heart</p>
+	<div class="heart"></div>
+</body>
+</html>
